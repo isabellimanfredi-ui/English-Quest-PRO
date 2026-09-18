@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5b5bd6">
+  <meta name="description" content="English Quest — pratique inglês com Grammar, Speaking, Writing e Reading.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <title>English Quest</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">🇬🇧 <span>English Quest</span></div>
+  <div class="xp">⭐ <span id="xp">0</span> XP</div>
+</header>
+
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">SEU TREINO DE INGLÊS</p>
+        <h1>Aprenda inglês praticando.</h1>
+        <p class="hero-text">Siga a ordem sugerida: comece pelo mais simples e avance aos poucos. Em todas as áreas, o conteúdo fica mais difícil dentro de cada tópico.</p>
+      </div>
+      <div class="hero-card">
+        <strong>Rota recomendada</strong>
+        <span>1. Simple Present → 10. Passive Voice</span>
+      </div>
+    </div>
+
+    <div class="section-title"><h2>Escolha uma habilidade</h2><p>Você pode voltar a qualquer tópico quando quiser.</p></div>
+    <div class="skill-grid">
+      <button class="skill-card" data-page="grammar"><span>📚</span><b>Grammar</b><small>Aprenda a regra e pratique.</small></button>
+      <button class="skill-card" data-page="speaking"><span>🎤</span><b>Speaking</b><small>Leia em voz alta e receba feedback da IA.</small></button>
+      <button class="skill-card" data-page="writing"><span>✍️</span><b>Writing</b><small>Escreva e deixe a IA corrigir.</small></button>
+      <button class="skill-card" data-page="reading"><span>🔊</span><b>Reading</b><small>Ouça e escreva o que ouviu.</small></button>
+    </div>
+  </section>
+
+  <section id="grammar" class="page">
+    <div class="section-title"><button class="back" data-page="home">← Início</button><h2>📚 Grammar</h2><p>Ordem do mais básico ao mais avançado.</p></div>
+    <div id="grammar-topics" class="topic-list"></div>
+    <div id="grammar-exercise" class="exercise hidden"></div>
+  </section>
+
+  <section id="speaking" class="page">
+    <div class="section-title"><button class="back" data-page="home">← Início</button><h2>🎤 Speaking</h2><p>Escolha um tópico, leia a frase em voz alta e deixe a IA analisar sua fala.</p></div>
+    <div id="speaking-topics" class="topic-list"></div>
+    <div id="speaking-exercise" class="exercise hidden"></div>
+  </section>
+
+  <section id="writing" class="page">
+    <div class="section-title"><button class="back" data-page="home">← Início</button><h2>✍️ Writing</h2><p>Responda em inglês. A IA corrige de forma didática e explica em português.</p></div>
+    <div id="writing-topics" class="topic-list"></div>
+    <div id="writing-exercise" class="exercise hidden"></div>
+  </section>
+
+  <section id="reading" class="page">
+    <div class="section-title"><button class="back" data-page="home">← Início</button><h2>🔊 Reading</h2><p>A IA pronuncia a frase. Você escreve exatamente o que entendeu.</p></div>
+    <div id="reading-topics" class="topic-list"></div>
+    <div id="reading-exercise" class="exercise hidden"></div>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <button data-page="home">🏠<span>Início</span></button>
+  <button data-page="grammar">📚<span>Grammar</span></button>
+  <button data-page="speaking">🎤<span>Speaking</span></button>
+  <button data-page="writing">✍️<span>Writing</span></button>
+  <button data-page="reading">🔊<span>Reading</span></button>
+</nav>
+
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
